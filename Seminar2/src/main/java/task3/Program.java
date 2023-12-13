@@ -39,6 +39,17 @@ public class Program {
 
         String updateQuery = queryBuilder.buildUpdateQuery(user);
         System.out.printf("Update Query: %s\n", updateQuery);
+
+        String deleteQuery = queryBuilder.buildDeleteQuery(Employee.class, pk);
+        System.out.printf("Delete Query: %s\n", deleteQuery);
     }
+    /*
+    Insert Query: INSERT INTO users (id, username, email) VALUES
+        ('483701f0-fd1a-45b0-81d4-b476af23b3eb', 'Stanislav', 'sample@gmail.com');
+    Select Query: SELECT * FROM users WHERE id = '483701f0-fd1a-45b0-81d4-b476af23b3eb';
+    Update Query: UPDATE users SET username = 'Stanislav', email = 'sample@gmail.com'
+        WHERE id = '483701f0-fd1a-45b0-81d4-b476af23b3eb';
+    Delete Query: DELETE FROM users WHERE id = '483701f0-fd1a-45b0-81d4-b476af23b3eb';
+     */
 
 }
